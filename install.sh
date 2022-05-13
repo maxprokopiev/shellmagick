@@ -6,6 +6,10 @@ then
   chsh -s /bin/zsh root
 fi
 
+git submodule update --init
+
+sudo apt-get -y install neovim
+
 ln -fs $PWD/zsh/.zsh $HOME/.zsh
 ln -fs $PWD/zsh/pure/pure.zsh $HOME/.zsh/prompt_pure_setup
 ln -fs $PWD/zsh/.zshrc $HOME/.zshrc
