@@ -1,3 +1,9 @@
 {
-  "terminal.integrated.shell.linux": "/bin/zsh"
+  "terminal.integrated.profiles.linux": {
+    "zsh (login)": {
+      "path": "zsh",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh (login)"
 }
