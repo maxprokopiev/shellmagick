@@ -12,6 +12,8 @@ alias ve='vim ~/.config/nvim/init.vim'
 alias ae='vim ~/.zsh/aliases.zsh'    # alias edit
 alias ar='source ~/.zsh/aliases.zsh' # alias reload
 
+alias cdotf='cd /workspaces/.codespaces/.persistedshare/dotfiles'
+
 alias gc='git commit'
 alias gs='git status'
 alias gl='git log'
