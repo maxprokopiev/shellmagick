@@ -12,6 +12,7 @@ setopt NO_BEEP
 # auto cd without typing cd (useful for '..' things)
 setopt AUTO_CD
 
+export EDITOR=vim
 
 source ~/.zsh/aliases.zsh
 
