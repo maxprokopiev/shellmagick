@@ -3,3 +3,7 @@
 [user]
   name = Max Prokopiev
   email = maxprokopiev@github.com
+[core]
+  autocrlf = false
+  editor = nvim
+  excludesfile = ~/.gitignore
