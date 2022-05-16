@@ -8,6 +8,7 @@ git submodule update --init
 
 PACKAGES_NEEDED="\
     neovim \
+    silversearcher-ag \
     bat"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then

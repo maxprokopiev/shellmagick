@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+
 " ======= General =======
 
 set number
