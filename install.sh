@@ -1,5 +1,9 @@
 #!/bin/sh
 
+exec > >(tee -i $HOME/dotfiles_install.log)
+exec 2>&1
+set -x
+
 git submodule update --init
 
 sudo apt-get -y install neovim
