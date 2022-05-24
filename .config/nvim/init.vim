@@ -67,4 +67,4 @@ map <C-l> <C-w>l
 nmap <leader>f :rightbelow vnew<CR>
 nmap <leader>v :rightbelow new<CR>
 
-map <leader>r :Files<CR>
+map <leader>t :Files<CR>

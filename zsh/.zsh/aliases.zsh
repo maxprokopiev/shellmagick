@@ -19,8 +19,14 @@ alias gs='git status'
 alias gl='git log'
 alias ga='git add'
 alias gd='git diff'
+alias gg='git grep'
+alias gco='git checkout'
 alias gpo='git push origin'
+alias glo='git pull origin'
 alias gri='git rebase --interactive'
 
 # quickly resolve conflicts using vim
 alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
+
+alias bi='bundle install'
+alias be='bundle exec'
