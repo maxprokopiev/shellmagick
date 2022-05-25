@@ -21,6 +21,7 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 set number
 set clipboard=unnamed
 set termguicolors
+set background=light
 
 set nowrap
 set linebreak
