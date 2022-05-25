@@ -24,6 +24,7 @@ alias gco='git checkout'
 alias gpo='git push origin'
 alias glo='git pull origin'
 alias gri='git rebase --interactive'
+alias gk='script/gack'
 
 # quickly resolve conflicts using vim
 alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
