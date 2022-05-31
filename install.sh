@@ -23,6 +23,8 @@ ln -fs $PWD/zsh/.zsh $HOME/.zsh
 ln -fs $PWD/zsh/pure/pure.zsh $HOME/.zsh/prompt_pure_setup
 ln -fs $PWD/zsh/.zshrc $HOME/.zshrc
 
+ln -fs $PWD/.tmux.conf $HOME/.tmux.conf
+
 mkdir -p $HOME/.config/nvim
 ln -fs $PWD/.config/nvim/init.vim $HOME/.config/nvim/init.vim
 nvim +'PlugInstall --sync' +qa
