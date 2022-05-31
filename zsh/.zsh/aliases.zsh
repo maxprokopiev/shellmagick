@@ -25,9 +25,12 @@ alias gpo='git push origin'
 alias glo='git pull origin'
 alias gri='git rebase --interactive'
 alias gk='script/gack'
+alias gsh='gh cs ssh'
 
 # quickly resolve conflicts using vim
 alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
 
 alias bi='bundle install'
 alias be='bundle exec'
+
+alias t='bin/rails test'
