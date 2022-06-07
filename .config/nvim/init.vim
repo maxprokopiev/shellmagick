@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'github/copilot.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

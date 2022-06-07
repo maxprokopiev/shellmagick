@@ -24,6 +24,7 @@ alias gco='git checkout'
 alias gpo='git push origin'
 alias glo='git pull origin'
 alias gri='git rebase --interactive'
+alias gra='git rebase --abort'
 alias gk='script/gack'
 alias gsh='gh cs ssh'
 
