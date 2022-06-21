@@ -19,6 +19,7 @@ alias gs='git status'
 alias gl='git log'
 alias ga='git add'
 alias gd='git diff'
+alias gbd='git branch -D'
 alias gg='git grep -n'
 alias gco='git checkout'
 alias gpo='git push origin'
@@ -26,7 +27,7 @@ alias glo='git pull origin'
 alias gri='git rebase --interactive'
 alias gra='git rebase --abort'
 alias gk='script/gack'
-alias gsh='gh cs ssh'
+alias gsh='gh cs ssh -- -R 127.0.0.1:7391:$(rdm socket)'
 
 # quickly resolve conflicts using vim
 alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
@@ -35,3 +36,6 @@ alias bi='bundle install'
 alias be='bundle exec'
 
 alias t='bin/rails test'
+
+alias open="rdm open"
+alias xdg-open="rdm open"

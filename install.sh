@@ -35,5 +35,9 @@ ln -fs $PWD/git/.gitignore $HOME/.gitignore
 mkdir -p $HOME/.config/Code/User
 ln -fs $PWD/vscode/settings.json $HOME/.config/Code/User/settings.json
 
+wget https://github.com/BlakeWilliams/remote-development-manager/releases/latest/download/rdm-linux-amd64
+sudo mv rdm-linux-amd64 /usr/local/bin/rdm
+chmod +x /usr/local/bin/rdm
+
 # use zsh by default
 sudo chsh -s "$(which zsh)" "$(whoami)"

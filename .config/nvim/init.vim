@@ -23,7 +23,7 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 " ======= General =======
 
 set number
-set clipboard=unnamed
+set clipboard=unnamedplus
 set termguicolors
 set background=light
 
@@ -73,3 +73,11 @@ nmap <leader>f :rightbelow vnew<CR>
 nmap <leader>v :rightbelow new<CR>
 
 map <leader>t :Files<CR>
+
+" =========== Clipboard with rdm ==============
+
+let g:clipboard = {"name": "rdm", "copy": {}, "paste": {}}
+let g:clipboard.copy["+"] = "rdm copy"
+let g:clipboard.paste["+"] = "rdm paste"
+let g:clipboard.copy["*"] = "rdm copy"
+let g:clipboard.paste["*"] = "rdm paste"
