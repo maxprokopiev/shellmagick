@@ -24,6 +24,7 @@ alias gg='git grep -n'
 alias gco='git checkout'
 alias gpo='git push origin'
 alias glo='git pull origin'
+alias gr='git rebase'
 alias gri='git rebase --interactive'
 alias gra='git rebase --abort'
 alias gk='script/gack'
@@ -34,6 +35,7 @@ alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
 
 alias bi='bundle install'
 alias be='bundle exec'
+alias mi='bundle exec rake db:migrate'
 
 alias t='bin/rails test'
 
