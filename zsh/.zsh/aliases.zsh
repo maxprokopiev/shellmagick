@@ -28,12 +28,14 @@ alias glo='git pull origin'
 alias gr='git rebase'
 alias gri='git rebase --interactive'
 alias gra='git rebase --abort'
-alias gra='git rebase --continue'
+alias grc='git rebase --continue'
 alias gk='script/gack'
 alias gsh='gh cs ssh -- -R 127.0.0.1:7391:$(rdm socket)'
 
 # quickly resolve conflicts using vim
 alias rc='vim +/"<<<<<<<" $( git diff --name-only --diff-filter=U | xargs )'
+
+alias ta='tmux attach-session -t 0 || tmux'
 
 alias bi='bundle install'
 alias be='bundle exec'
