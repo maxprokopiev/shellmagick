@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'github/copilot.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jgdavey/tslime.vim'
 
 call plug#end()
 
@@ -73,6 +74,8 @@ nmap <leader>f :rightbelow vnew<CR>
 nmap <leader>v :rightbelow new<CR>
 
 map <leader>t :Files<CR>
+map <Leader>s :call Send_to_Tmux("t " . @% . ":" . line(".") . "\n")<CR>
+map <Leader>r :call Send_to_Tmux("be rspec " . @% . ":" . line(".") . "\n")<CR>
 
 " =========== Clipboard with rdm ==============
 
