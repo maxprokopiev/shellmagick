@@ -27,7 +27,7 @@ ln -fs $PWD/.tmux.conf $HOME/.tmux.conf
 
 mkdir -p $HOME/.config/nvim
 ln -fs $PWD/.config/nvim/init.vim $HOME/.config/nvim/init.vim
-nvim +'PlugInstall --sync' +qa
+nvim --headless +'PlugInstall --sync' +qa
 
 ln -fs $PWD/git/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/git/.gitignore $HOME/.gitignore
