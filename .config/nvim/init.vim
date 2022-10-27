@@ -16,6 +16,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'github/copilot.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jgdavey/tslime.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'gfanto/fzf-lsp.nvim'
+Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
 
@@ -84,3 +87,16 @@ let g:clipboard.copy["+"] = "rdm copy"
 let g:clipboard.paste["+"] = "rdm paste"
 let g:clipboard.copy["*"] = "rdm copy"
 let g:clipboard.paste["*"] = "rdm paste"
+
+" ==== lua madness =====
+
+lua <<EOF
+
+require'lspconfig'.sorbet.setup{ cmd = { "bin/srb", "tc", "--lsp", "--disable-watchman" } }
+
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true })
+
+EOF
+
+nmap <leader>r :References<CR>
+nmap <leader>d :sp<CR>:Definitions<CR>
