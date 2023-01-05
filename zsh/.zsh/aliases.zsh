@@ -45,5 +45,17 @@ alias mi='bundle exec rake db:migrate'
 
 alias t='bin/rails test'
 
-alias open="rdm open"
-alias xdg-open="rdm open"
+gh-cs-sync () {
+  local codespace=$(gh cs list | awk '{print $1}' | fzf)
+  local config=$(gh cs ssh -c $codespace --config)
+  local hostname=$(echo $config | awk -v name=$codespace '$0 ~ "Host .*"name".*" {print $2}')
+  echo $config > ~/.ssh/codespaces/$codespace
+  mutagen sync create --name=$codespace $(pwd) $hostname:/workspaces/$(basename $(pwd))
+}
+
+gh-cs-stop-sync () {
+  local codespace=$(gh cs list | awk '{print $1}' | fzf)
+
+  rm ~/.ssh/codespaces/$codespace
+  mutagen sync terminate $codespace
+}
