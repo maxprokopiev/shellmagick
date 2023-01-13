@@ -19,6 +19,11 @@ Plug 'jgdavey/tslime.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'gfanto/fzf-lsp.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'AndrewRadev/diffurcate.vim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'preservim/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -34,6 +39,8 @@ set background=light
 set nowrap
 set linebreak
 
+set autochdir
+
 " =========== Mouse ==============
 set mouse=a
 set mousefocus
@@ -46,7 +53,7 @@ set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor
 
 " highlight the current line
 set cul
-hi CursorLine term=none cterm=none guibg=GhostWhite
+"hi CursorLine term=none cterm=none guibg=GhostWhite
 
 " =========== no backups ===========
 set nobackup
@@ -55,11 +62,12 @@ set nowb
 
 " =========== mappings =============
 
-" remap leader key from \ to ,
-let mapleader=","
-let g:mapleader=","
-let maplocalleader=","
-let g:maplocalleader=","
+nnoremap <SPACE> <Nop>
+" remap leader key from \ to SPC
+let mapleader="\<Space>"
+let g:mapleader="\<Space>"
+let maplocalleader="\<Space>"
+let g:maplocalleader="\<Space>"
 
 " faster commands
 nmap <leader>w :w!<CR>
@@ -73,20 +81,23 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " window splitting
-nmap <leader>f :rightbelow vnew<CR>
-nmap <leader>v :rightbelow new<CR>
+nmap <leader>l :rightbelow vnew<CR>
+nmap <leader>j :rightbelow new<CR>
 
-map <leader>t :Files<CR>
+map <leader>o :Buffers<CR>
+map <leader>p :Files<CR>
+map <leader>P :Commands<CR>
+map <leader>f :Ag<CR>
 map <Leader>s :call Send_to_Tmux("t " . @% . ":" . line(".") . "\n")<CR>
 map <Leader>r :call Send_to_Tmux("be rspec " . @% . ":" . line(".") . "\n")<CR>
 
 " =========== Clipboard with rdm ==============
 
-let g:clipboard = {"name": "rdm", "copy": {}, "paste": {}}
-let g:clipboard.copy["+"] = "rdm copy"
-let g:clipboard.paste["+"] = "rdm paste"
-let g:clipboard.copy["*"] = "rdm copy"
-let g:clipboard.paste["*"] = "rdm paste"
+" let g:clipboard = {"name": "rdm", "copy": {}, "paste": {}}
+" let g:clipboard.copy["+"] = "rdm copy"
+" let g:clipboard.paste["+"] = "rdm paste"
+" let g:clipboard.copy["*"] = "rdm copy"
+" let g:clipboard.paste["*"] = "rdm paste"
 
 " ==== lua madness =====
 
