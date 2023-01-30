@@ -31,10 +31,10 @@ chmod u+x nvim.appimage
 ./squashfs-root/AppRun --version
 sudo mv squashfs-root / && ln -s /squashfs-root/AppRun $HOME/.local/bin/nvim
 
-#git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-#mkdir -p $HOME/.config
-#ln -fs $PWD/.config/nvim $HOME/.config/nvim
-#$HOME/.local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+mkdir -p $HOME/.config
+ln -fs $PWD/.config/nvim $HOME/.config/nvim
+$HOME/.local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 ln -fs $PWD/git/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/git/.gitignore $HOME/.gitignore

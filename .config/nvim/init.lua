@@ -14,11 +14,6 @@ vim.keymap.set('', '<Leader>s', ':w<CR>')
 
 require('plugins')
 
-require('github-theme').setup({
-  hide_inactive_statusline = false,
-  theme_style = 'light'
-})
-
 vim.o.number = true
 
 local builtin = require('telescope.builtin')
