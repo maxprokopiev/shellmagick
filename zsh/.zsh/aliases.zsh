@@ -1,12 +1,17 @@
 # General ============================================
 alias ls='ls -lh -A -G'
-alias vim='nvim'
+
+if [ -n "${CODESPACES}" ]; then
+  alias vim='~/.local/bin/nvim'
+else
+  alias vim='nvim'
+fi
 
 # zsh profile editing
 alias ze='vim ~/.zshrc'
 alias zr='source ~/.zshrc'
 
-alias ve='vim ~/.config/nvim/init.vim'
+alias ve='vim ~/.config/nvim/init.lua'
 
 # Alias Editing
 alias ae='vim ~/.zsh/aliases.zsh'    # alias edit
@@ -19,6 +24,7 @@ alias gs='git status'
 alias gl='git log'
 alias ga='git add'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gbl='git branch -l'
 alias gbd='git branch -D'
 alias gg='git grep -n'

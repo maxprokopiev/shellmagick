@@ -37,6 +37,5 @@ source ~/.zsh/aliases.zsh
 
 if [ -n "${CODESPACES}" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  export PATH="$HOME/.local/bin:$PATH"
 fi
 eval "$(rbenv init - zsh)"
