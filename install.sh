@@ -7,7 +7,6 @@ set -x
 git submodule update --init
 
 PACKAGES_NEEDED="\
-    neovim \
     ripgrep \
     bat"
 
@@ -25,10 +24,17 @@ ln -fs $PWD/zsh/.zshrc $HOME/.zshrc
 
 ln -fs $PWD/.tmux.conf $HOME/.tmux.conf
 
+pip3 install --user pynvim
+curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+sudo mv squashfs-root / && ln -s /squashfs-root/AppRun $HOME/.local/bin/nvim
+
 #git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 #mkdir -p $HOME/.config
 #ln -fs $PWD/.config/nvim $HOME/.config/nvim
-#nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+#$HOME/.local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 ln -fs $PWD/git/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/git/.gitignore $HOME/.gitignore
