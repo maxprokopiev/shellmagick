@@ -8,7 +8,7 @@ git submodule update --init
 
 PACKAGES_NEEDED="\
     neovim \
-    silversearcher-ag \
+    ripgrep \
     bat"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
@@ -25,9 +25,9 @@ ln -fs $PWD/zsh/.zshrc $HOME/.zshrc
 
 ln -fs $PWD/.tmux.conf $HOME/.tmux.conf
 
-mkdir -p $HOME/.config/nvim
-ln -fs $PWD/.config/nvim/init.vim $HOME/.config/nvim/init.vim
-nvim --headless +'PlugInstall --sync' +qa
+mkdir -p $HOME/.config
+ln -fs $PWD/.config/nvim $HOME/.config/nvim
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 ln -fs $PWD/git/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/git/.gitignore $HOME/.gitignore
