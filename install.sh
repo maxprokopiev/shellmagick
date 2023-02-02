@@ -30,7 +30,8 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 ./squashfs-root/AppRun --version
 mkdir $HOME/.local/bin
-sudo mv squashfs-root / && ln -s /squashfs-root/AppRun $HOME/.local/bin/nvim
+sudo mv squashfs-root /
+ln -s /squashfs-root/AppRun $HOME/.local/bin/nvim
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 mkdir -p $HOME/.config
