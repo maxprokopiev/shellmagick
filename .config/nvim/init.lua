@@ -27,3 +27,22 @@ require("nvim-tree").setup()
 vim.o.nobackup = true
 vim.o.noswapfile = true
 vim.o.nowb = true
+
+vim.o.nowrap = true
+vim.o.linebreak = true
+
+vim.o.cul = true
+
+vim.keymap.set('n', ';', ':')
+
+vim.g.clipboard = {
+  name = "rdm",
+  copy = {
+    ["+"] = { "rdm", "copy" },
+    ["*"] = { "rdm", "copy" },
+  },
+  paste = {
+    ["+"] = { "rdm", "paste" },
+    ["*"] = { "rdm", "paste" },
+  },
+}

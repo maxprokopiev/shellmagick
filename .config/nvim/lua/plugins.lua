@@ -23,4 +23,5 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
+  use 'axelf4/vim-strip-trailing-whitespace'
 end)
