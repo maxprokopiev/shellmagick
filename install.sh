@@ -7,6 +7,8 @@ set -x
 git submodule update --init
 
 PACKAGES_NEEDED="\
+    zsh
+    tmux
     ripgrep \
     bat"
 
