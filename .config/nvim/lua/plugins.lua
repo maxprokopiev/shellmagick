@@ -24,4 +24,5 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'axelf4/vim-strip-trailing-whitespace'
+  use 'fatih/vim-go'
 end)
