@@ -28,8 +28,9 @@ vim.o.nobackup = true
 vim.o.noswapfile = true
 vim.o.nowb = true
 
-vim.o.nowrap = true
-vim.o.linebreak = true
+vim.wo.wrap = false
+vim.wo.linebreak = true
+vim.wo.list = false
 
 vim.o.cul = true
 
