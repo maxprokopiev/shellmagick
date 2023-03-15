@@ -48,3 +48,5 @@ vim.g.clipboard = {
     ["*"] = { "rdm", "paste" },
   },
 }
+
+vim.g['test#strategy'] = "vimux"

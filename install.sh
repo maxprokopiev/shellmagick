@@ -41,6 +41,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 mkdir -p $HOME/.config
 ln -fs $PWD/.config/nvim $HOME/.config/nvim
 $HOME/.local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+$HOME/.local/bin/nvim --headless +GoInstallBinaries +qa
 
 ln -fs $PWD/git/.gitconfig $HOME/.gitconfig
 ln -fs $PWD/git/.gitignore $HOME/.gitignore
