@@ -26,6 +26,7 @@ require("nvim-tree").setup()
 
 vim.o.nobackup = true
 vim.o.noswapfile = true
+vim.o.swapfile = false
 vim.o.nowb = true
 
 vim.wo.wrap = false
