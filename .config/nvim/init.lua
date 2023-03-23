@@ -50,3 +50,6 @@ vim.g.clipboard = {
 }
 
 vim.g['test#strategy'] = "vimux"
+
+vim.keymap.set('n', '<leader>k', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<leader>k', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

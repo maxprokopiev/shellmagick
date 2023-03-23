@@ -27,4 +27,5 @@ return require('packer').startup(function(use)
   use 'fatih/vim-go'
   use 'vim-test/vim-test'
   use 'preservim/vimux'
+  use "numToStr/FTerm.nvim"
 end)

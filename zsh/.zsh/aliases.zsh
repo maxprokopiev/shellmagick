@@ -51,6 +51,8 @@ alias mi='bundle exec rake db:migrate'
 
 alias t='bin/rails test'
 
+alias ghgh="gh cs create -R 'github/github' --devcontainer-path '.devcontainer/devcontainer.json' -b 'master' -m 'largePremiumLinux'"
+
 gh-cs-sync () {
   local codespace=$(gh cs list | awk '{print $1}' | fzf)
   local config=$(gh cs ssh -c $codespace --config)
