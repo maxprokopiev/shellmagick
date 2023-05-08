@@ -53,3 +53,13 @@ vim.g['test#strategy'] = "vimux"
 
 vim.keymap.set('n', '<leader>k', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', '<leader>k', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+vim.cmd [[
+function! DebugNearest()
+  let g:test#go#delve#executable = 'GOFLAGS="-tags=integration" dlv test'
+  let g:test#go#runner = 'delve'
+  TestNearest
+  unlet g:test#go#runner
+endfunction
+]]
+vim.api.nvim_create_user_command("DebugNearest", ":call DebugNearest()", { nargs = 0 })
