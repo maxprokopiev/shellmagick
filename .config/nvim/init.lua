@@ -7,7 +7,7 @@ vim.keymap.set('', '<C-j>', '<C-w>j')
 vim.keymap.set('', '<C-k>', '<C-w>k')
 vim.keymap.set('', '<C-l>', '<C-w>l')
 
-vim.keymap.set('', '<Leader>l', ':rightbelow vnew %<CR>')
+vim.keymap.set('', '<Leader>l', ":let linenum=getpos('.')[1] | :rightbelow vnew % | :call cursor(linenum, 0)<CR>")
 vim.keymap.set('', '<Leader>j', ':rightbelow new %<CR>')
 vim.keymap.set('', '<Leader>r', ':so %<CR>')
 vim.keymap.set('', '<Leader>s', ':w<CR>')
