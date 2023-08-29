@@ -24,6 +24,12 @@ vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
 require("nvim-tree").setup()
 
+require('github-theme').setup({
+  groups = { all = { StatusLineNC = { fg = '#83868a', bg = '#ced3d9' } } },
+  options = { hide_nc_statusline = false, compile_path = vim.fn.expand('$HOME/.config/nvim/github-theme-compiled') },
+})
+vim.cmd('colorscheme github_light')
+
 vim.o.swapfile = false
 
 vim.wo.wrap = false
