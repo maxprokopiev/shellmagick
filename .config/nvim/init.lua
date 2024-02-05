@@ -66,3 +66,6 @@ function! DebugNearest()
 endfunction
 ]]
 vim.api.nvim_create_user_command("DebugNearest", ":call DebugNearest()", { nargs = 0 })
+
+vim.keymap.set('n', '<leader>b', ':GBrowse<CR>')
+vim.keymap.set('v', '<leader>b', ':GBrowse<CR>')

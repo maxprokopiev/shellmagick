@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'projekt0n/github-nvim-theme'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', branch = 'master',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
@@ -19,5 +19,6 @@ return require('packer').startup(function(use)
   use 'fatih/vim-go'
   use 'vim-test/vim-test'
   use 'preservim/vimux'
-  use "numToStr/FTerm.nvim"
+  use 'numToStr/FTerm.nvim'
+  use 'github/copilot.vim'
 end)
