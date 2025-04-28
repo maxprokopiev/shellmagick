@@ -2,7 +2,7 @@
 alias ls='ls -lh -A -G'
 
 if [ -n "${CODESPACES}" ]; then
-  alias vim='~/.local/bin/nvim'
+  alias vim='/usr/bin/nvim'
 else
   alias vim='nvim'
 fi
