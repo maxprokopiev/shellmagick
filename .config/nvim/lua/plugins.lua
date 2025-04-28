@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'projekt0n/github-nvim-theme'
   use {
-    'nvim-telescope/telescope.nvim', branch = 'master',
+    'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
