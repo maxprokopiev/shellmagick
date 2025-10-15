@@ -12,6 +12,20 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',
     },
   }
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate',
+      config = function()
+        local configs = require("nvim-treesitter.configs")
+
+        configs.setup({
+            ensure_installed = { "lua", "markdown", "markdown_inline", "yaml", "diff" },
+            sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
+          })
+      end,
+  }
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
@@ -21,4 +35,14 @@ return require('packer').startup(function(use)
   use 'preservim/vimux'
   use 'numToStr/FTerm.nvim'
   use 'github/copilot.vim'
+  use 'nvim-treesitter/nvim-treesitter-context'
+  use({
+    "olimorris/codecompanion.nvim",
+    config = function()
+      require("codecompanion").setup()
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+    }
+  })
 end)
