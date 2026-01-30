@@ -35,7 +35,4 @@ source ~/.zsh/aliases.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [ -n "${CODESPACES}" ]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
 eval "$(rbenv init - zsh)"
