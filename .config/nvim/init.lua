@@ -73,14 +73,6 @@ vim.keymap.set('v', '<leader>b', ':GBrowse<CR>')
 require("nvim-treesitter").setup()
 require("codecompanion").setup()
 
-local ts_status, treesitter = pcall(require, "nvim-treesitter.configs")
-if ts_status then
-  treesitter.setup({
-    ensure_installed = { "lua", "markdown", "markdown_inline", "yaml", "diff" },
-    highlight = { enable = true },
-  })
-end
-
 require("telescope").setup{
   pickers = {
     find_files = {

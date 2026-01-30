@@ -14,17 +14,20 @@ return require('packer').startup(function(use)
   }
   use {
       'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate',
-      config = function()
-        local configs = require("nvim-treesitter.configs")
-
-        configs.setup({
-            ensure_installed = { "lua", "markdown", "markdown_inline", "yaml", "diff" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },
-          })
-      end,
+      opts = {
+        ensure_installed = {
+          "bash", "css", "go", "graphql", "html", "javascript", "json",
+          "lua", "markdown", "ruby", "scss", "typescript", "vim", "yaml",
+        },
+        auto_install = true,
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = {
+          enable = false,
+        },
+      },
   }
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-fugitive'
