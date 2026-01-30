@@ -50,8 +50,11 @@ ln -fs $PWD/git/.gitignore $HOME/.gitignore
 mkdir -p $HOME/.config/Code/User
 ln -fs $PWD/vscode/settings.json $HOME/.config/Code/User/settings.json
 
-wget https://github.com/BlakeWilliams/remote-development-manager/releases/latest/download/rdm-linux-amd64
-sudo mv rdm-linux-amd64 /usr/local/bin/rdm
+wget https://github.com/BlakeWilliams/remote-development-manager/archive/refs/tags/v0.0.7.zip
+unzip v0.0.7.zip
+cd remote-development-manager-0.0.7
+go build main.go
+sudo mv main /usr/local/bin/rdm
 chmod +x /usr/local/bin/rdm
 
 # use zsh by default
