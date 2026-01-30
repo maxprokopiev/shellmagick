@@ -76,7 +76,7 @@ require("codecompanion").setup()
 require("telescope").setup{
   defaults = {
     file_ignore_patterns = {
-      "node_modules", "vendor", ".git"
+      "node_modules", "vendor"
     },
   },
   pickers = {
